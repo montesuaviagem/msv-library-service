@@ -1,0 +1,52 @@
+{
+  "name": "@msv/libs",
+  "version": "0.0.1",
+  "description": "Biblioteca central das APIs do Monte sua Viagem",
+  "main": "./src",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "pretest": "npm run --silent lint",
+    "test": "mocha spec/**/*.spec.js --reporter spec",
+    "test:watch": "npm test -- --watch",
+    "test:unit": "mocha spec/unit/*.spec.js --reporter spec",
+    "test:e2e": "mocha spec/e2e/*.spec.js --reporter spec",
+    "lint": "esw *.js src spec --color",
+    "lint:watch": "npm run lint -- --watch",
+    "jsdoc": "jsdoc -c docs/conf.js"
+  },
+  "bin": {
+    "libs": "bin/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weberamaral/msv-library-service.git"
+  },
+  "author": "Weber Amaral <weberamaral@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weberamaral/msv-library-service/issues"
+  },
+  "homepage": "https://github.com/weberamaral/msv-library-service#readme",
+  "files": [
+    "src",
+    "bin"
+  ],
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-watch": "^3.1.0",
+    "jsdoc": "^3.4.3",
+    "mocha": "^3.4.2",
+    "node-mocks-http": "^1.6.2",
+    "should": "^11.2.1",
+    "sinon": "^2.3.2"
+  },
+  "dependencies": {
+    "http-status": "^1.0.1"
+  }
+}
