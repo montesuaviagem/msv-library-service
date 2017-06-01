@@ -3,6 +3,8 @@
  * Copyright 2016 Monte sua Viagem. All Rights Reserved.
  */
 
+const httpStatus = require('http-status');
+
 /**
  *
  */
@@ -19,7 +21,7 @@ class ExtendableError extends Error {
     super(message);
     this.name = this.constructor.name;
     this.message = message;
-    this.status = status || -1;
+    this.status = status || httpStatus.INTERNAL_SERVER_ERROR;
     this.errors = errors;
     this.isOperational = isOperational;
     this.isPublic = isPublic;

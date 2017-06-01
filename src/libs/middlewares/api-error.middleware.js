@@ -5,7 +5,7 @@
 
 const httpStatus = require('http-status');
 
-const APIError = require('./api-error');
+const APIError = require('../helpers/api-error');
 
 /**
  *
@@ -14,7 +14,7 @@ module.exports = () => (err, req, res, next) => {
   if (!(err instanceof APIError)) {
     const status = err.status || err.statusCode || httpStatus.INTERNAL_SERVER_ERROR;
     const errors = err.errors || [];
-    return next(err.message, status, errors);
+    return next(new APIError(err.message, status, errors));
   }
   return next(err);
 };
