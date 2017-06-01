@@ -5,7 +5,7 @@
 
 const httpStatus = require('http-status');
 
-const APIError = require('./api-error');
+const APIError = require('../helpers/api-error');
 
 /**
  *

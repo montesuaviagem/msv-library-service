@@ -1,0 +1,18 @@
+{
+  "originalErrors": [
+    {
+      "message": "sample message error",
+      "path": "attribute_path",
+      "type": "attribute_type",
+      "context": {
+        "path": "attribute_context_path"
+      }
+    }
+  ],
+  "expectedErrors": [
+    {
+      "message": "sample message error",
+      "attribute": "attribute_path"
+    }
+  ]
+}
