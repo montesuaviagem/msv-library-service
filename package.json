@@ -1,6 +1,6 @@
 {
   "name": "@msv/libs",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Biblioteca central das APIs do Monte sua Viagem",
   "main": "./src",
   "directories": {
