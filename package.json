@@ -15,7 +15,7 @@
     "test:e2e": "mocha spec/e2e/**/*.spec.js --reporter spec",
     "lint": "esw *.js src spec --color",
     "lint:watch": "npm run lint -- --watch",
-    "jsdoc": "jsdoc -c docs/conf.js"
+    "jsdoc": "jsdoc -c docs/conf.json"
   },
   "bin": {
     "libs": "bin/run.js"
