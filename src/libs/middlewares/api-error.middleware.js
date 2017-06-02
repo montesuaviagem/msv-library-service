@@ -8,7 +8,7 @@ const httpStatus = require('http-status');
 const APIError = require('../helpers/api-error');
 
 /**
- *
+ * APIError middleware
  */
 module.exports = () => (err, req, res, next) => {
   if (!(err instanceof APIError)) {

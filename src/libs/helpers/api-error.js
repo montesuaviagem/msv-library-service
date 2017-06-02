@@ -6,16 +6,17 @@
 const httpStatus = require('http-status');
 
 /**
- *
+ * Extendable error for APIError exceptions
  */
 class ExtendableError extends Error {
   /**
+   * Creates new instance of ExtendableError
    *
-   * @param message
-   * @param status
-   * @param errors
-   * @param isOperational
-   * @param isPublic
+   * @param {string} message
+   * @param {number} status
+   * @param {Object[]} errors
+   * @param {boolean} isOperational
+   * @param {boolean} isPublic
    */
   constructor(message, status, errors, isOperational, isPublic) {
     super(message);
@@ -30,9 +31,18 @@ class ExtendableError extends Error {
 }
 
 /**
- *
+ * Represents an API Error exceptions
  */
 class APIError extends ExtendableError {
+  /**
+   * Creates new instance of APIError
+   *
+   * @param {string} message
+   * @param {number} status
+   * @param {Object[]} [errors]
+   * @param {boolean} [isOperational]
+   * @param {boolean} [isPublic]
+   */
   constructor(message, status, errors = [], isOperational = false, isPublic = false) {
     super(message, status, errors, isOperational, isPublic);
   }

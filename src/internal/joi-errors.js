@@ -5,13 +5,11 @@
 
 const _ = require('lodash');
 
-const JoiErrors = exports;
-
 /**
  *
  * @param errors
  */
-JoiErrors.parse = (errors) => {
+module.exports.parse = (errors) => {
   const result = [];
   _.each(errors, (err) => {
     result.push({ message: err.message, attribute: err.path });

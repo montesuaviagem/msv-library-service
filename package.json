@@ -1,6 +1,6 @@
 {
   "name": "@msv/libs",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Biblioteca central das APIs do Monte sua Viagem",
   "main": "./src",
   "directories": {
@@ -15,7 +15,7 @@
     "test:e2e": "mocha spec/e2e/**/*.spec.js --reporter spec",
     "lint": "esw *.js src spec --color",
     "lint:watch": "npm run lint -- --watch",
-    "jsdoc": "jsdoc -c docs/conf.js"
+    "jsdoc": "jsdoc -c docs/conf.json"
   },
   "bin": {
     "libs": "bin/run.js"

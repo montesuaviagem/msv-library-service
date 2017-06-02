@@ -60,3 +60,6 @@ typings/
 # WebStorm
 .idea
 
+# docs
+out/
+
