@@ -5,18 +5,18 @@
 
 const chai = require('chai');
 const httpStatus = require('http-status');
-const should = require('should');
 
 const APIError = require('../../../src/libs/helpers/api-error');
 
 const expect = chai.expect;
+// const should = chai.should(); // eslint-disable-line no-unused-vars
 
 chai.config.includeStack = true;
 
 describe('# APIError', () => {
   let apiError;
   beforeEach(() => {
-    apiError = new APIError('Sample message error');
+    apiError = new APIError('Sample message error', httpStatus.INTERNAL_SERVER_ERROR);
   });
   it('Should exists', (done) => {
     expect(apiError).to.not.equal(null);
@@ -47,7 +47,7 @@ describe('# APIError', () => {
     done();
   });
   it('Should have property errors with value [{}]', (done) => {
-    const apiErrorExpected = new APIError('message', httpStatus.OK, [{ message: 'message'} ]);
+    const apiErrorExpected = new APIError('message', httpStatus.OK, [{ message: 'message' }]);
     expect(apiErrorExpected).to.have.property('errors').and.to.be.an('array').an.to.not.empty; // eslint-disable-line no-unused-expressions
     done();
   });

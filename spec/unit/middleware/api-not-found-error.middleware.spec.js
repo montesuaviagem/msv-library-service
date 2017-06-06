@@ -14,7 +14,7 @@ const expect = chai.expect;
 describe('# APINotFoundErrorMiddleware', () => {
   let middleware;
   beforeEach(() => {
-    middleware = require('../../../src/libs/middlewares/api-not-found-error.middleware');
+    middleware = require('../../../src/libs/middlewares/api-not-found-error.middleware'); // eslint-disable-line global-require
   });
   it('Should exists', (done) => {
     expect(middleware).to.not.equal(null);

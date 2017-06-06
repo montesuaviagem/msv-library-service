@@ -14,7 +14,7 @@ const expect = chai.expect;
 describe('# APIErrorMiddleware', () => {
   let middleware;
   beforeEach(() => {
-    middleware = require('../../../src/libs/middlewares/api-error.middleware');
+    middleware = require('../../../src/libs/middlewares/api-error.middleware'); // eslint-disable-line global-require
   });
   it('Should exists', (done) => {
     expect(middleware).to.not.equal(null);

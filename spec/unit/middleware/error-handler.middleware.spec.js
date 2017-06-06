@@ -5,7 +5,6 @@
 
 const chai = require('chai');
 const httpMock = require('node-mocks-http');
-const sinon = require('sinon');
 
 const APIError = require('../../../src/libs/helpers/api-error');
 
@@ -14,7 +13,7 @@ const expect = chai.expect;
 describe('# ErrorHandlerMiddleware', () => {
   let middleware;
   beforeEach(() => {
-    middleware = require('../../../src/libs/middlewares/error-handler.middleware');
+    middleware = require('../../../src/libs/middlewares/error-handler.middleware'); // eslint-disable-line global-require
   });
   it('Should exists', (done) => {
     expect(middleware).to.not.equal(null);
