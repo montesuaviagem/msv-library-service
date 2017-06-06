@@ -9,10 +9,10 @@
   },
   "scripts": {
     "pretest": "npm run --silent lint",
-    "test": "mocha spec/**/*.spec.js --reporter spec",
+    "test": "mocha spec/**/**/*.spec.js  --reporter dot --require should",
     "test:watch": "npm test -- --watch",
-    "test:unit": "mocha spec/unit/**/*.spec.js --reporter spec",
-    "test:e2e": "mocha spec/e2e/**/*.spec.js --reporter spec",
+    "test:unit": "mocha spec/unit/**/*.spec.js --reporter spec --require should",
+    "test:e2e": "mocha spec/e2e/**/*.spec.js --reporter spec  --require should",
     "lint": "esw *.js src spec --color",
     "lint:watch": "npm run lint -- --watch",
     "jsdoc": "jsdoc -c docs/conf.json"

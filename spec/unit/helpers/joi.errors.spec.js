@@ -4,8 +4,6 @@
  */
 
 const chai = require('chai');
-const should = require('should');
-const _ = require('lodash');
 
 const mockJoiErrors = require('../../mock-joi-errors.json');
 
@@ -16,7 +14,7 @@ chai.config.includeStack = true;
 describe('# JoiErrors', () => {
   let joiErrors;
   beforeEach(() => {
-    joiErrors = require('../../../src/internal/joi-errors');
+    joiErrors = require('../../../src/internal/joi-errors'); // eslint-disable-line global-require
   });
   it('Should exists', (done) => {
     expect(joiErrors).to.not.equal(null);
